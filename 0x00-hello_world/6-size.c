@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - prints the phrases with proper grammar
- * return: 0 if exited successfully
+ * Return: 0 if exited successfully
  */
 int main(void)
 {
