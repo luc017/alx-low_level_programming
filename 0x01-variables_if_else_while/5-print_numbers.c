@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - prints digits
  *
@@ -6,11 +7,11 @@
  */
 int main(void)
 {
-	char i;
+	char a;
 
-	for (i = 0; i < 10; i++)
+	for (a = '0'; a <= '9'; a++)
 	{
-		putchar(i);
+		putchar(a);
 	}
 
 	putchar('\n');
