@@ -10,7 +10,7 @@ void times_table(void)
 	{
 		for (b = 0; b <= 9; b++)
 		{
-			k = a * b
+			k = a * b;
 			if (a == o)
 			{
 				_putchar(k + '0');
@@ -31,6 +31,6 @@ void times_table(void)
 				_putchar((k % 10) + '0');
 			}
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
