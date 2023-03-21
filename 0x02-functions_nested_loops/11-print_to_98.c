@@ -4,7 +4,7 @@
  * print_to_98 - printing all the natural numbers
  * @n: the starting int
  */
-void print_to _98(int n)
+void print_to_98(int n)
 {
 	int a, b;
 
