@@ -6,7 +6,7 @@
 
 void print_alphabet(void)
 {
-	char a;
+	char a = 'a';
 
 	while (a <= 'z')
 	{
@@ -15,3 +15,4 @@ void print_alphabet(void)
 	}
 	_putchar('\n');
 }
+i
