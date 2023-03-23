@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_number - prints all digits followed by a new line
+ * print_numbers - prints all digits followed by a new line
  *
  **/
-void print_number(void)
+void print_numbers(void)
 {
 	int a;
 
