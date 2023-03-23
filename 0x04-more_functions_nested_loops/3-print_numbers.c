@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_number - prints all numbers followed by a new line
+ * print_number - prints all digits followed by a new line
  *
  **/
 void print_number(void)
@@ -12,5 +12,6 @@ void print_number(void)
 	{
 		_putchar(a + '0');
 	}
+
 	_putchar('\n');
 }
