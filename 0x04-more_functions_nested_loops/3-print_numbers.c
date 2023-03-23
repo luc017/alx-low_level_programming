@@ -10,10 +10,9 @@ void print_number(void)
 
 	a = 0;
 
-	while (a <= '9')
+	for (a = '0'; a < '10'; a++)
 	{
 		_putchar(a);
-		a++;
 	}
 	_putchar('\n');
 }
