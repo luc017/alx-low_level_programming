@@ -1,33 +1,29 @@
 #include "main.h"
 
 /**
- * leet - encodes a string into 1337
- * @str: pointer to the string
- * Return: str
+ * leet - encodes a string using 1337
+ * @s: pointer
+ * Return: s encode
  */
-char *leet(char *str)
+char *leet(char *s)
 {
-	int i;
+	char *se = s;
+	char key[] = {'A', 'E', 'O', 'T', 'L'};
+	int value[] = {4, 3, 0, 7, 1};
+	unsigned int i;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (*s)
 	{
-		if (str[i] != 'a' || str[i] != 'A'
-				 || str[i] != 'e' || str[i] != 'E'
-				 || str[i] != 'o' || str[i] != 'O'
-				 || str[i] != 't' || str[i] != 'T'
-				 || str[i] != 'l' || str[i] != 'L')
+		for (i = 0; i < sizeof(key) / sizeof(char); i++)
 		{
-			str[i] = str[i];
+			/*the 32 is added to include the uppercase*/
+			if (*s == key[i] || *s == key[i] + 32)
+			{
+				*s = 48 + value[i];
+			}
 		}
-		else
-		{
-			str[i] += (str[i] == 'a' || str[i] == 'A') * ('4' - 'a');
-			str[i] += (str[i] == 'e' || str[i] == 'E') * ('4' - 'a');
-			str[i] += (str[i] == 'o' || str[i] == 'O') * ('4' - 'a');
-			str[i] += (str[i] == 't' || str[i] == 'T') * ('4' - 'a');
-			str[i] += (str[i] == 'l' || str[i] == 'L') * ('4' - 'a');
-		}
+		s++;
 	}
 
-	return (str);
+	return (se);
 }
