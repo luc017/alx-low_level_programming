@@ -7,7 +7,6 @@
 char *rot13(char *c)
 {
 	char *ce = c;
-	int i;
 
 	while (*c != '\0')
 	{
