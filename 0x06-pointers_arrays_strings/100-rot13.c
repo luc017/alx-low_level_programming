@@ -8,21 +8,16 @@ char *rot13(char *c)
 {
 	char *ce = c;
 	int i;
-	char key[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
-		 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
-		 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-	char value[] = {'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
-		 'V', 'W', 'X', 'Y', 'Z', 'A', 'B', 'C', 'D',
-		 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'};
 
-	while (*c)
+	while (*c != '\0')
 	{
-		for (i = 0; i < 26; i++)
+		if ((*c >= 'a' && *c <= 'm') || (*c >= 'A' && *c <= 'M'))
 		{
-			if (*c == key[i] || *c == key[i] + 32)
-			{
-				*c = value[i];
-			}
+			*c = *c + 13;
+		}
+		else if ((*c >= 'n' && *c <= 'z') || (*c >= 'N' && *c <= 'Z'))
+		{
+			*c = *c - 13;
 		}
 		c++;
 	}
