@@ -1,6 +1,6 @@
 #include "main.h"
 
-/***
+/**
  * _memset - fills area memory block with constant byte
  * @s: pointer
  * @b: the value to be set
