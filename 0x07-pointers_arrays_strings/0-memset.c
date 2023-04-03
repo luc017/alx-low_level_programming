@@ -1,10 +1,11 @@
 #include "main.h"
 
 /***
- * _memeset - sets value to a specific memory block
+ * _memset - fills area memory block with constant byte
  * @s: pointer
  * @b: the value to be set
  * @n: number of bytes
+ *
  * Return: s
  */
 char *_memset(char *s, char b, unsigned int n)
@@ -16,5 +17,5 @@ char *_memset(char *s, char b, unsigned int n)
 		s[d] = b;
 		d++;
 	}
-	return (s)
+	return (s);
 }
