@@ -12,7 +12,7 @@ int divisible(int num, int d)
 		return (0);
 	if (d == num / 2)
 		return (1);
-	return (divisible(num, div + 1));
+	return (divisible(num, d + 1));
 }
 /**
  * is_prime_number - finds if it is prime number
