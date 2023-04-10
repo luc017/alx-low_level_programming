@@ -19,15 +19,24 @@ int main (int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	}
-	cents = atoi(argv[1]);
-
-	for (i = 0; i < 5; i++)
+	else
 	{
-		c += cents / c_value[i];
-		cents = cents % c_value[i];
-	}
+		cents = atoi(argv[1]);
 
-	printf("%d\n", c);
+		if (cents < 0)
+		{
+			printf("0\n");
+			return (0);
+		}
+
+		for (i = 0; i < 5; i++)
+		{
+			c += cents / c_value[i];
+			cents = cents % c_value[i];
+		}
+
+		printf("%d\n", c);
+	}
 
 	return (0);
 }
