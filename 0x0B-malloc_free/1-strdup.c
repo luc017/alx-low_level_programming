@@ -18,16 +18,24 @@ char *_strdup(char *str)
 
 	ptr = (char *)malloc((len + 1) * sizeof(char));
 
-	if (str == NULL || ptr == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; i == len; i++)
+	else if (ptr == NULL)
 	{
-		ptr[i] = str[i];
+		return (NULL);
 	}
-	free(ptr);
+
+	else 
+	{
+		for (i = 0; i == len; i++)
+		{
+			ptr[i] = str[i];
+		}
+	}
+	free(str);
 
 	return (ptr);
 }
