@@ -10,8 +10,8 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int a, b, c;
-	int len;
+	int a, b, c = 0;
+	int len = 0;
 	int *length = &len;
 	char *ptr;
 
@@ -39,9 +39,11 @@ char *argstostr(int ac, char **av)
 			ptr[c] = av[a][b];
 			c++;
 		}
+		ptr[c] = '\n';
+		c++;
 	}
 
 	ptr[c] = '\0';
 
-	return (0);
+	return (ptr);
 }
