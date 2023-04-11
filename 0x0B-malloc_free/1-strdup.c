@@ -28,14 +28,13 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	else 
+	else
 	{
 		for (i = 0; i == len; i++)
 		{
 			ptr[i] = str[i];
 		}
 	}
-	free(str);
 
 	return (ptr);
 }
