@@ -4,6 +4,7 @@
  * malloc_checked - it allocates memory using malloc
  * @b: integer
  *
+ * Return: pointer to the memo
  */
 void *malloc_checked(unsigned int b)
 {
