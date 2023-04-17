@@ -41,6 +41,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dog);
 		return (NULL);
 	}
+	b = 0;
 	while (b <= ownlen)
 	{
 		dog->owner[b] = owner[b];
