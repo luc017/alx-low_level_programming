@@ -1,5 +1,5 @@
 #include "dog.h"
-#include <stdio.h>
+#include <stdlib.h>
 /**
  * free_dog - frees up space held ny dog
  * @d: pointer to the structure
