@@ -25,11 +25,11 @@ int main(int argc, char *argv[])
 	}
 
 	n = atoi(argv[1]);
-	f = (unsigned char *)main;
+	f = (unsigned char *)&main;
 	if (n > 0)
 	{
 		for (; d < (n - 1); d++)
-			printf("%02hhx", f[d++]);
+			printf("%02hhx", f[d]);
 		printf("%hhx\n", f[d]);
 	}
 	return (0);
