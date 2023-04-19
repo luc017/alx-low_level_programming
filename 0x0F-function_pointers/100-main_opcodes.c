@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	unsigned char *f;
-	int n, d = 0;
+	int d = 0;
 
 	if (argc != 2)
 	{
@@ -24,11 +24,10 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	n = atoi(argv[1]);
 	f = (unsigned char *)&main;
-	if (n > 0)
+	if (atoi(argv[1]) > 0)
 	{
-		for (; d < (n - 1); d++)
+		for (; d < (atoi(argv[1]) - 1); d++)
 			printf("%02hhx", f[d]);
 		printf("%hhx\n", f[d]);
 	}
