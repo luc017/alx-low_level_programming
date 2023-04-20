@@ -36,6 +36,8 @@ void print_all(const char * const format, ...)
 
 				printf("%s", str);
 				break;
+			default:
+				break;
 		}
 		p++;
 
@@ -43,7 +45,6 @@ void print_all(const char * const format, ...)
 					 *p == 's'))
 		{
 			printf(", ");
-			break;
 		}
 	}
 	printf("\n");
