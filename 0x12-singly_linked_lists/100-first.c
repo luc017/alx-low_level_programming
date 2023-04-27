@@ -1,9 +1,11 @@
-#include "lists.h"
-#include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
 /**
- * main - prints a sentence
+ * print_message - prints a sentence before main runs
  *
- * Return: 0
+ * Return: void
  */
-int main()
+void print_message(void)
+{
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
+}
