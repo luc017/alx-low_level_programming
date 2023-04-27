@@ -6,8 +6,8 @@ section .text
     extern printf
 
 main:
-    push format
-    call printf
-    add rsp, 8
+    mov edi, format
     xor eax, eax
+    call printf
+    mov eax, 0
     ret
