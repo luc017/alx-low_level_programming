@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * add_node: adds another node to the linked list
+ * add_node -  adds another node to the linked list
  * @head: pointer to the pointer to the head of the list
  * @str: string to be added
  *
@@ -10,18 +10,18 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	unsigned int length;
+	int length;
 	list_t *tmp;
 
 	tmp = malloc(sizeof(list_t));
-	if(tmp == NULL)
+	if (tmp == NULL)
 		return (NULL);
 
-	for(length = 0; str[length] != '\0'; length++)
+	for (length = 0; str[length] != '\0'; length++)
 		;
 
-	tmp->len = length++;
 	tmp->str = strdup(str);
+	tmp->len = length;
 	tmp->next = *head;
 	*head = tmp;
 
