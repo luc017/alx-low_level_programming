@@ -1,5 +1,5 @@
 #include <stdio.h>
-void print_message(void);
+void print_message(void) __attribute__ ((constructor));
 /**
  * print_message - prints a sentence before main runs
  *
