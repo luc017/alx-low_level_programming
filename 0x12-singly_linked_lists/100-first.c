@@ -1,4 +1,5 @@
 #include <stdio.h>
+void print_message(void);
 /**
  * print_message - prints a sentence before main runs
  *
