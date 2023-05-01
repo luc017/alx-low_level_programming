@@ -29,13 +29,12 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		prev = temporary;
 		temporary = temporary->next;
+		if (temporary == NULL)
+			return (-1);
 		counter++;
 	}
 
-	if (temporary == NULL)
-		return (-1);
-
-	prev->next = temporary->next;
+	temporary->next = prev->next;
 	free(prev);
 
 	return (1);
