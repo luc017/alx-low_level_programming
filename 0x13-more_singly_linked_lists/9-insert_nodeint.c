@@ -31,14 +31,14 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	temporary = *head;
 	while (temporary != NULL && counter < idx - 1)
 	{
-		if (counter == idx - 1)
-		{
-			new->next = temporary->next;
-			temporary->next = new;
-			return (new);
-		}
 		temporary = temporary->next;
 		counter++;
+	}
+	if (counter == idx - 1)
+	{
+		new->next = temporary->next;
+		temporary->next = new;
+		return (new);
 	}
 
 	return (NULL);
