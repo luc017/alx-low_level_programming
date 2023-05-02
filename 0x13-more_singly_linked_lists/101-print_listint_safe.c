@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <stdio.h>
 /**
  * print_listint_safe - prints the linked list
  * @head: pointer to the first node
@@ -12,7 +10,7 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *current = head;
 	unsigned int counter = 0;
 
-	while (current != NULL)
+	while (current)
 	{
 		printf("[%p] %d\n", (void *)current, current->n);
 
@@ -24,7 +22,7 @@ size_t print_listint_safe(const listint_t *head)
 		else
 		{
 			printf("-> [%p] %d\n", (void *)current->next, (current->next)->n);
-			exit(98);
+			break;
 		}
 	}
 
