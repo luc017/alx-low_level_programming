@@ -34,7 +34,7 @@ size_t free_listint_safe(listint_t **h)
 			break;
 		}
 	}
-	current = NULL;
+	*h = NULL;
 
 	return (counter);
 }
