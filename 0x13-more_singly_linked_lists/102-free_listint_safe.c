@@ -33,7 +33,6 @@ size_t free_listint_safe(listint_t **h)
 			counter++;
 			break;
 		}
-		current = temporary;
 	}
 	current = NULL;
 
