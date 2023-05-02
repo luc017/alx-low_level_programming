@@ -10,10 +10,7 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *current = head;
-	unsigned int counter;
-
-	if (head == NULL)
-		exit (98);
+	unsigned int counter = 0;
 
 	while (current != NULL)
 	{
