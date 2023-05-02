@@ -9,12 +9,13 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t counter = 0;
-	listint_t *temporary, *current = *h;
+	listint_t *temporary, *current;
 	int index;
 
 	if (h == NULL || *h == NULL)
 		return (0);
 
+	current = *h;
 	while (current != NULL)
 	{
 		index = current - current->next;
