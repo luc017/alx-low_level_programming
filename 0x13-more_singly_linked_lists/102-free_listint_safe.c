@@ -16,16 +16,24 @@ size_t free_listint_safe(listint_t **h)
 
 	while (current != NULL)
 	{
-		current++;
-		temporary = current->next;
-		free(current);
-		if (temporary >= current)
+
+		if (current - current->next > 0)
 		{
-			*h = NULL;
+			temporary = current->next;
+			free(current);
+			current = temporary;
+			counter++;
+		}
+		else
+		{
+			free(current);
+			current = NULL;
+			counter++;
 			break;
 		}
 		current = temporary;
 	}
+	current = NULL;
 
 	return (counter);
 }
