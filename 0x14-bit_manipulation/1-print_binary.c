@@ -7,13 +7,16 @@
  */
 void print_binary(unsigned long int n)
 {
-	int d = 0;
+	unsigned int d = 0;
 	int size = sizeof(n) * (8 - 1);
 
 	if (n == 0)
+	{
 		_putchar('0');
+		return;
+	}
 
-	while (size >= 0)
+	for (; size >= 0; size--)
 	{
 		if ((n >> size) & 1)
 		{
@@ -22,7 +25,5 @@ void print_binary(unsigned long int n)
 		}
 		else if (d)
 			_putchar('0');
-
-		size--;
 	}
 }
