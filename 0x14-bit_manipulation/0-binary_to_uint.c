@@ -20,10 +20,10 @@ unsigned int binary_to_uint(const char *b)
 		if (b[length - 1] != '1' && b[length - 1] != '0')
 			return (0);
 
-		multiplier *= 2;
-
 		if (b[length - 1] == '1')
 			d += multiplier;
+
+		multiplier *= 2;
 
 		length--;
 	}
