@@ -11,7 +11,7 @@ void print_binary(unsigned long int n)
 	int size = (sizeof(n) * 8) - 1;
 
 	if (n == 0)
-		_putchar('0')
+		_putchar('0');
 
 	for (; size >= 0; size--)
 	{
