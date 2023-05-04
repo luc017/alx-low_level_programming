@@ -8,13 +8,10 @@
 void print_binary(unsigned long int n)
 {
 	unsigned int d = 0;
-	int size = sizeof(n) * (8 - 1);
+	int size = (sizeof(n) * 8) - 1;
 
 	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
+		_putchar('0')
 
 	for (; size >= 0; size--)
 	{
