@@ -7,7 +7,7 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int d = 0, multiplier = 0;
+	unsigned int d = 0, multiplier = 1;
 	size_t length;
 
 	if (b == NULL)
@@ -22,7 +22,7 @@ unsigned int binary_to_uint(const char *b)
 
 		multiplier *= 2;
 
-		if (b[length - 1] == '1' && b[length - 1] == '0')
+		if (b[length - 1] == '1' || b[length - 1] == '0')
 			d += multiplier;
 
 		length--;
