@@ -17,12 +17,12 @@ unsigned int binary_to_uint(const char *b)
 
 	while (length)
 	{
-		if (b[length - 1] != '1' || b[length - 1] != '0')
+		if (b[length - 1] != '1' && b[length - 1] != '0')
 			return (0);
 
 		multiplier *= 2;
 
-		if (b[length - 1] == '1' || b[length - 1] == '0')
+		if (b[length - 1] == '1' && b[length - 1] == '0')
 			d += multiplier;
 
 		length--;
