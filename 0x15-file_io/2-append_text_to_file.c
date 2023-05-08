@@ -21,13 +21,15 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (file == -1)
 		return (-1);
 
-	for (; *(text_content + length); length++)
-		;
 	if (text_content == NULL)
 	{
 		close(file);
 		return (1);
 	}
+
+	for (; *(text_content + length); length++)
+		;
+
 	_write = write(file, text_content, length);
 	if (_write == -1)
 		return (-1);
