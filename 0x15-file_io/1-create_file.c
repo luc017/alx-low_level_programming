@@ -19,7 +19,7 @@ int create_file(const char *filename, char *text_content)
 
 	fprintf(file, "%s", text_content);
 
-	fclose(fp);
+	fclose(file);
 
 	return (1);
 }
