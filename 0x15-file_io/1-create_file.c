@@ -1,9 +1,10 @@
 #include "main.h"
 #include <unistd.h>
 #include <fcntl.h>
+#include <sys/stat.h>
 /**
  * create_file - creates a file
- * @file: is the name of the created file
+ * @filename: is the name of the created file
  * @text_content: string content
  *
  * Return: 1(success), -1 on failure
@@ -26,7 +27,7 @@ int create_file(const char *filename, char *text_content)
 	_write = write(file, text_content, length);
 	close(file);
 
-	if(_write == -1)
+	if (_write == -1)
 		return (-1);
 
 	return (1);
