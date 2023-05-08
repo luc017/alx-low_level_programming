@@ -10,16 +10,23 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	FILE *file;
+	int file, _write;
+	int length = 0;
 
 	if (filename == NULL)
 		return (-1);
 
-	file = fopen("filename", "rw");
+	file = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 600);
+	if (file == -1)
+		return (-1);
+	for (; text_content && *(text_content + length); length++)
+		;
 
-	fprintf(file, "%s", text_content);
+	_write = write(file, text_content, length);
+	close(file);
 
-	fclose(file);
+	if(_write == -1)
+		return (-1);
 
 	return (1);
 }
