@@ -1,1 +1,1 @@
-fuctions and nested loops readme
+This readme touches about the low level programming
